@@ -6,7 +6,7 @@ int maximumWealth(std::vector<std::vector<int>>& accounts) {
     int tmp {};
 
     for (const auto& customer: accounts) {
-        for (auto bank: customer) {
+        for (auto& bank: customer) {
             tmp += bank;
         }
         if (tmp > max){
