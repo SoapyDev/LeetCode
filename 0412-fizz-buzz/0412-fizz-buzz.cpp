@@ -2,9 +2,19 @@ class Solution {
 public:
 std::vector<std::string> fizzBuzz(int n) {
 
+    if(n == 1){
+        std::vector<std::string> answer{"1"};
+        return answer;
+    } else if(n == 2){
+        std::vector<std::string> answer{"1"};
+        answer.emplace_back("2");
+        return answer;
+    } else{
+        std::vector<std::string> answer{};
+    }
     std::vector<std::string> answer{"1"};
-
-    for (int i = 2; i <= n; ++i) {
+    answer.emplace_back("2");
+    for (int i = 3; i <= n; ++i) {
 
         if (i%3==0 && i%5==0){
             answer.emplace_back("FizzBuzz");
@@ -13,7 +23,7 @@ std::vector<std::string> fizzBuzz(int n) {
         } else if(i%5==0){
             answer.emplace_back("Buzz");
         } else{
-            answer.push_back(std::to_string(i));
+            answer.emplace_back(std::to_string(i));
         }
     }
     return answer;
