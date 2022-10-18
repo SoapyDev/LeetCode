@@ -4,13 +4,10 @@ public:
 std::vector<int> runningSum(std::vector<int>& nums) {
 
 
-    std::vector<int> sums {0};
-
-    for (int & num : nums) {
-        sums.push_back(num + sums.back());
+    for (int i = 1; i < nums.size(); i++) {
+        nums[i] += nums[i - 1];
     }
 
-    sums.erase(sums.begin());
-    return sums;
+    return nums;
 }
 };
