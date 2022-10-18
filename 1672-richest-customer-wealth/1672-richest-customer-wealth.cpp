@@ -2,8 +2,8 @@ class Solution {
 public:
 int maximumWealth(std::vector<std::vector<int>>& accounts) {
 
-    int max {0};
-    int tmp {0};
+    int max {};
+    int tmp {};
 
     for (const auto& customer: accounts) {
         for (auto& bank: customer) {
