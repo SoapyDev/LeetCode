@@ -3,7 +3,7 @@ public:
 int maximumWealth(std::vector<std::vector<int>>& accounts) {
 
     int max {0};
-    int tmp {};
+    int tmp {0};
 
     for (const auto& customer: accounts) {
         for (auto& bank: customer) {
