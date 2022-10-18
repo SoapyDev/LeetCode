@@ -2,17 +2,14 @@ class Solution {
 public:
 std::vector<std::string> fizzBuzz(int n) {
 
+    std::vector<std::string> answer{"1"};
     if(n == 1){
-        std::vector<std::string> answer{"1"};
         return answer;
     } else if(n == 2){
-        std::vector<std::string> answer{"1"};
         answer.emplace_back("2");
         return answer;
-    } else{
-        std::vector<std::string> answer{};
     }
-    std::vector<std::string> answer{"1"};
+
     answer.emplace_back("2");
     for (int i = 3; i <= n; ++i) {
 
