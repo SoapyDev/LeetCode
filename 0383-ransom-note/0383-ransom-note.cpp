@@ -20,8 +20,6 @@ bool canConstruct(std::string ransomNote, std::string magazine) {
         it = letters.find(letter);
         if(it->first == letter){
             it->second++;
-        } else{
-            letters[letter] = 1;
         }
     }
 
