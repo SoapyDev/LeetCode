@@ -7,14 +7,8 @@ public:
         int iteration {0};
         
         for(auto &num: nums){
-            tmp = num;
-            iteration = 0;
-            
-            while(tmp > 0){
-                tmp/=10;
-                ++iteration;
-            }
-            
+            iteration = floor(log10(num))+1;
+                
             if(iteration%2 == 0){
                 evenNum++;
             }
