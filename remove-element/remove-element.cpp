@@ -2,9 +2,17 @@ class Solution {
 public:
 int removeElement(vector<int>& nums, int val) {
 
-    int j = nums.size()- std::count(nums.begin(), nums.end(),val);
-    std::remove(nums.begin(), nums.end(),val);
-    
-    return j;
+    int i=0;
+    int n=nums.size();
+    while(i!=n){
+        if(nums[i]==val){
+            nums.erase(nums.begin()+i);
+            n=nums.size();
+        }
+        else{
+            i++;
+        }
+    }
+    return nums.size();
 }
 };
