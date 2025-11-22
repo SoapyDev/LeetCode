@@ -32,7 +32,7 @@ impl Solution {
 
             carry = sum / 10;
             current.next = Some(Box::new(ListNode::new(sum % 10)));
-            current = current.next.as_mut().unwrap();
+            current = current.next.as_mut().expect("Node was assigned to next, but cannot be found. A critical error must have occured.");
 
             p1 = p1.and_then(|n| n.next);
             p2 = p2.and_then(|n| n.next);
