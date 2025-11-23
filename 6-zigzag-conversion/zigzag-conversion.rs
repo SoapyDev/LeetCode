@@ -4,26 +4,6 @@ enum Direction {
     Descending,
 }
 
-
-impl Direction {
-    pub fn flip(&mut self) {
-        *self = match self {
-            Direction::Ascending => Direction::Descending,
-            Direction::Descending => Direction::Ascending,
-        };
-    }
-
-    pub fn is_descending(&self) -> bool {
-        *self == Direction::Descending
-    }
-
-    pub fn is_ascending(&self) -> bool {
-        *self == Direction::Ascending
-    }
-
-}
-
-
 impl Solution {
 
 
@@ -54,5 +34,6 @@ impl Solution {
         }
         words.join("")
     }
+
 
 }
