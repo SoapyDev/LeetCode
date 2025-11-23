@@ -1,20 +1,16 @@
 impl Solution {
+
 pub fn reverse(x: i32) -> i32 {
     let is_negative = x < 0;
     let mut x = x.abs();
-    let mut numbers = vec![];
+    let mut reversed: usize = 0;
 
     while x > 0 {
-        numbers.push(x % 10);
+        let n = x % 10;
+        reversed *= 10;
+        reversed += n as usize;
         x /= 10;
     }
-
-    let mut reversed: usize = 0;
-    let mut multiple: usize = 1;
-    numbers.into_iter().rev().for_each(|n| {
-        reversed += multiple * n as usize;
-        multiple *= 10;
-    });
 
     if reversed > i32::MAX as usize {
         return 0;
@@ -26,5 +22,6 @@ pub fn reverse(x: i32) -> i32 {
 
     reversed as i32
 }
+
 
 }
